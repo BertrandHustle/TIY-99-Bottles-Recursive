@@ -35,8 +35,10 @@ public class Main {
             //Main string
 
             String beerNumber = "";
+            String beerNumberOneLess = "";
 
             beerNumber = translator.toText(countNumber);
+            beerNumberOneLess = translator.toText(countNumber - 1);
 
             if (countNumber == 0) {
 
@@ -49,14 +51,24 @@ public class Main {
                 bottles = "bottle";
 
                 System.out.println(beerNumber + " " + bottles + " of beer on the wall, " +
-                        beerNumber + " " + bottles + " of beer! Take one down, pass it around! " +
-                        "no more bottles of beer on the wall!");
+                    beerNumber + " " + bottles + " of beer! Take one down, pass it around! " +
+                    "no more bottles of beer on the wall!");
+
+            } else if (countNumber == 2){
+
+                System.out.print(beerNumber + " " + bottles + " of beer on the wall, " +
+                        beerNumber + " " + bottles + " of beer! Take one down, pass it around! ");
+
+                bottles = "bottle";
+
+                System.out.println(beerNumberOneLess + " " + bottles + " of beer on the wall!");
 
             } else {
 
                 System.out.println(beerNumber + " " + bottles + " of beer on the wall, " +
-                        beerNumber + " " + bottles + " of beer! Take one down, pass it around! " +
-                        beerNumber + " " + bottles + " of beer on the wall!");
+                    beerNumber + " " + bottles + " of beer! Take one down, pass it around! " +
+                    beerNumberOneLess + " " + bottles + " of beer on the wall!");
+
             }
 
         }
